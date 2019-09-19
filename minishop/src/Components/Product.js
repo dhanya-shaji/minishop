@@ -5,8 +5,7 @@ export default class Product extends React.Component{
     }
     render()
     {
-        return(
-            
+        return(  
         <div className="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex" >
         <div  className="product d-flex flex-column">
          <a href="#"  className="img-prod">
