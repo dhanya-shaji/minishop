@@ -1,15 +1,10 @@
 import React from 'react'
-import Header from './Common/Header'
-import Navbar from './Common/Navbar'
-import Footer from './Common/Footer'
-import Homecomponents from './Components/Homecomponents'
-import Feature1 from './Features/Feature1'
-import Feature2 from './Features/Feature2'
-import Features3 from './Features/Features3'
-import ProductDescription from './Components/ProductDescription'
-import Offer from './Components/Offer'
-import DealWithTheMonth from './Components/DealWithTheMonth'
-import Gallery from './Components/Gallery'
+import Header from '../Common/Header'
+import Navbar from '../Common/Navbar'
+import CatalogHome from './CatalogHome'
+import SideBar from './SideBar'
+import Footer from '../Common/Footer'
+import CatalogProduct from './CatalogProduct'
 const ProductDetails=[
     {
         productImage:'./images/product-1.png',
@@ -52,26 +47,19 @@ const ProductDetails=[
         productPrize:"1900rs"
     }
 ];
-export default class Home extends React.Component{
+export default class Shop extends React.Component{
     render()
     {
-        return(
-           <div>
-               <Header/>
-               <Navbar/>
-               <Homecomponents/>
-               <section class="ftco-section ftco-no-pt ftco-no-pb row">
-                   <Feature1/>
-                   <Feature2/>
-                   <Features3/>
-               </section>
-                <ProductDescription data={ProductDetails}/>
-                <Offer/>
-                <DealWithTheMonth/>
-                <Gallery/>
-                <Footer/>
-           </div>
+    return(
+    <div>
+    <Header/>
+    <Navbar/>
+    <CatalogHome/>
+    <div>
+    <CatalogProduct data={ProductDetails}/>
+    </div>
+    <Footer/>
+    </div>
         )
     }
 }
-

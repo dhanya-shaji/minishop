@@ -1,5 +1,5 @@
 import React from 'react'
-//import Homecomponents from './Components/Homecomponents'
+
 export default class Navbar extends React.Component{
     render()
     {
@@ -17,8 +17,8 @@ export default class Navbar extends React.Component{
 	          <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalog</a>
               <div className="dropdown-menu" aria-labelledby="dropdown04">
-              	<a className="dropdown-item" href="shop.html">Shop</a>
-                <a className="dropdown-item" href="product-single.html">Single Product</a>
+              	<a className="dropdown-item" href="Shop.js">Shop</a>
+                <a className="dropdown-item" href="SingleProduct.js" >Single Product</a>
                 <a className="dropdown-item" href="cart.html">Cart</a>
                 <a className="dropdown-item" href="checkout.html">Checkout</a>
               </div>
