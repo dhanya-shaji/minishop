@@ -4,40 +4,40 @@ export default class CatalogProduct extends  React.Component{
     render()
     {
         return(
-  <section class="ftco-section bg-light">
-     <div class="container">
-         <div class="row">
-        <div class="col-md-8 col-lg-10 order-md-last">
-        <div class="row">
+  <section className="ftco-section bg-light">
+     <div className="container">
+         <div className="row">
+        <div className="col-md-8 col-lg-10 order-md-last">
+        <div className="row">
         {this.props.data.map((product,index)=>(
-                <div class="col-sm-12 col-md-12 col-lg-4 ftco-animate d-flex">
-                <div class="product d-flex flex-column">
-                <a href="#" class="img-prod"><img class="img-fluid" src={product.productImage} 
+                <div className="col-sm-12 col-md-12 col-lg-4 ftco-animate d-flex">
+                <div className="product d-flex flex-column">
+                <a href="#" className="img-prod"><img className="img-fluid" src={product.productImage} 
                 alt="Colorlib Template"/>
-                 <div class="overlay"></div>
+                 <div className="overlay"></div>
                  </a>
-                <div class="text py-3 pb-4 px-3">
-                   <div class="d-flex">
-                    <div class="cat">
+                <div className="text py-3 pb-4 px-3">
+                   <div className="d-flex">
+                    <div className="cat">
                            <span>Lifestyle</span>
                         </div>
-                 <div class="rating">
-                 <p class="text-right mb-0">
-                   <a href="#"><span class="ion-ios-star-outline"></span></a>
-                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                   <a href="#"><span class="ion-ios-star-outline"></span></a>
-                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                 <div className="rating">
+                 <p className="text-right mb-0">
+                   <a href="#"><span className="ion-ios-star-outline"></span></a>
+                    <a href="#"><span className="ion-ios-star-outline"></span></a>
+                    <a href="#"><span className="ion-ios-star-outline"></span></a>
+                   <a href="#"><span className="ion-ios-star-outline"></span></a>
+                    <a href="#"><span className="ion-ios-star-outline"></span></a>
                   </p>
                   </div>
                  </div>
                 <h3><a href="#">{product.productTitle}</a></h3>
-                <div class="pricing">
-                <p class="price"><span>{product.productPrize}</span></p>
+                <div className="pricing">
+                <p className="price"><span>{product.productPrize}</span></p>
                     </div>
-                      <p class="bottom-area d-flex px-3">
-                     <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
-                    <a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+                      <p className="bottom-area d-flex px-3">
+                     <a href="#" className="add-to-cart text-center py-2 mr-1"><span>Add to cart <i className="ion-ios-add ml-1"></i></span></a>
+                    <a href="#" className="buy-now text-center py-2">Buy now<span><i className="ion-ios-cart ml-1"></i></span></a>
                       </p>
                      </div>
                      </div>

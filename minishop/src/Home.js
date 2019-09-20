@@ -10,6 +10,7 @@ import ProductDescription from './Components/ProductDescription'
 import Offer from './Components/Offer'
 import DealWithTheMonth from './Components/DealWithTheMonth'
 import Gallery from './Components/Gallery'
+
 const ProductDetails=[
     {
         productImage:'./images/product-1.png',
