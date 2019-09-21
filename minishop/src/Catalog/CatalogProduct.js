@@ -14,7 +14,8 @@ export default class CatalogProduct extends  React.Component{
                 <div className="col-sm-12 col-md-12 col-lg-4 ftco-animate d-flex">
                 <div className="product d-flex flex-column">
         
-                <Link to={{pathname:"/SingleProductView", productParam:{productDeatils:product}}}  className="img-prod">
+                <Link to={{pathname:"/SingleProductView",
+                 productParam:{productDeatils:product}}}  className="img-prod">
                   <img className="img-fluid" src={product.productImage} 
                 alt="Colorlib Template"/>
                  <div className="overlay"></div>

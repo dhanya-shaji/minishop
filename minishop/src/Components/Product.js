@@ -1,4 +1,5 @@
 import React from 'react'
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 export default class Product extends React.Component{
     constructor(props){
         super(props)
@@ -8,10 +9,11 @@ export default class Product extends React.Component{
         return(  
         <div className="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex" >
         <div  className="product d-flex flex-column">
-         <a href="#"  className="img-prod">
+         < Link to={{pathname:"/SingleProductView",
+                 productParam:{productDeatils:this.props.data}}} className="img-prod">
          <img className="img-fluid" src={this.props.data.productImage} alt="Colorlib Template"/>
          <div  className="overlay"></div>
-                            </a>
+                            </ Link>
                             <div className="text py-3 pb-4 px-3">
                                 <div className="d-flex">
                                     <div className="cat">
