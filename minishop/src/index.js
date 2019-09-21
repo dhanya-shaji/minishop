@@ -10,9 +10,11 @@ import Shop from './Catalog/Shop'
 import SingleProduct from './Catalog/SingleProduct'
 import Cart from './Catalog/Cart'
 import Checkout from './Catalog/Checkout'
+import SingleProductView from  './Catalog/SingleProductView'
 const routing = (
     <Router>
       <div>
+      
         <Route exact path="/" component={Home}/>
         <Route path="/about" component={About} />
         <Route path="/shop" component={Shop}/>
@@ -20,6 +22,7 @@ const routing = (
         <Route path="/Cart" component={Cart}/>
         <Route path="/checkout" component={Checkout}/>
         <Route path="/Contact" component={Contact}/>
+        <Route path="/SingleProductView" component={SingleProductView }/>
 
       </div>
     </Router>

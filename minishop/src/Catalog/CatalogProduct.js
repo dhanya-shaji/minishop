@@ -1,5 +1,6 @@
 import React from 'react'
 import SideBar from './SideBar'
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 export default class CatalogProduct extends  React.Component{
     render()
     {
@@ -12,10 +13,12 @@ export default class CatalogProduct extends  React.Component{
         {this.props.data.map((product,index)=>(
                 <div className="col-sm-12 col-md-12 col-lg-4 ftco-animate d-flex">
                 <div className="product d-flex flex-column">
-                <a href="#" className="img-prod"><img className="img-fluid" src={product.productImage} 
+        
+                <Link to={{pathname:"/SingleProductView", productParam:{productDeatils:product}}}  className="img-prod">
+                  <img className="img-fluid" src={product.productImage} 
                 alt="Colorlib Template"/>
                  <div className="overlay"></div>
-                 </a>
+                 </Link>
                 <div className="text py-3 pb-4 px-3">
                    <div className="d-flex">
                     <div className="cat">

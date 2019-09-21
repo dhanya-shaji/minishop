@@ -2,7 +2,6 @@ import React from 'react'
 import Header from '../Common/Header'
 import Navbar from '../Common/Navbar'
 import CatalogHome from './CatalogHome'
-import SideBar from './SideBar'
 import Footer from '../Common/Footer'
 import CatalogProduct from './CatalogProduct'
 const ProductDetails=[
