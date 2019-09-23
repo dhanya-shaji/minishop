@@ -10,6 +10,7 @@ import ProductDescription from './Components/ProductDescription'
 import Offer from './Components/Offer'
 import DealWithTheMonth from './Components/DealWithTheMonth'
 import Gallery from './Components/Gallery'
+import ApiFetching from './Api/ApiFetching'
 
 const ProductDetails=[
     {
@@ -58,10 +59,11 @@ export default class Home extends React.Component{
     {
         return(
            <div>
+               <ApiFetching/>
                <Header/>
                <Navbar/>
                <Homecomponents/>
-               <section class="ftco-section ftco-no-pt ftco-no-pb row">
+               <section className="ftco-section ftco-no-pt ftco-no-pb row">
                    <Feature1/>
                    <Feature2/>
                    <Features3/>
