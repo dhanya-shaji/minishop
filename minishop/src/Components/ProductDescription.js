@@ -2,7 +2,7 @@ import React from 'react'
 import Product from './Product'
 export default class ProductDescription extends React.Component{
      constructor(props){
-         super(props)
+         super(props);
      }
     render()
     {

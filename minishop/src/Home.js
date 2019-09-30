@@ -10,7 +10,7 @@ import ProductDescription from './Components/ProductDescription'
 import Offer from './Components/Offer'
 import DealWithTheMonth from './Components/DealWithTheMonth'
 import Gallery from './Components/Gallery'
-import ApiFetching from './Api/ApiFetching'
+import Sample from './Components/Sample'
 
 const ProductDetails=[
     {
@@ -55,20 +55,41 @@ const ProductDetails=[
     }
 ];
 export default class Home extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={
+            productDeatils:[]
+        }
+        this.onFetchProductDetails();
+    }
+
+    onFetchProductDetails=()=>{
+        
+        fetch('http://localhost/MinishopApi/DataselectionApi.php')
+        .then(result=>{
+            return result.json();
+        }
+        ).then(data=>
+            {
+              console.log(data,'datssssssssssssssssss');
+              this.setState({productDeatils:data});
+            })
+          }
+       
     render()
     {
         return(
            <div>
-               <ApiFetching/>
                <Header/>
                <Navbar/>
                <Homecomponents/>
+               <Sample item={this.state.productDeatils}/>
                <section className="ftco-section ftco-no-pt ftco-no-pb row">
                    <Feature1/>
                    <Feature2/>
                    <Features3/>
                </section>
-                <ProductDescription data={ProductDetails}/>
+                <ProductDescription data={this.state.productDeatils}/>
                 <Offer/>
                 <DealWithTheMonth/>
                 <Gallery/>

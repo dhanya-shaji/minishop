@@ -27,7 +27,8 @@ export default  class ChechoutComponentDescription extends React.Component{
 		            	<div className="form-group">
 		            		<label for="country">State / Country</label>
 		            		<div className="select-wrap">
-		                  <div className="icon"><span className="ion-ios-arrow-down"></span></div>
+		                  <div className="icon"><span className="ion-ios-arrow-down">
+							  </span></div>
 		                  <select name="" id="" className="form-control">
 		                  	<option value="">France</option>
 		                    <option value="">Italy</option>

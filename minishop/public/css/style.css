@@ -9319,7 +9319,76 @@ h1, h2, h3, h4, h5,
         font-weight: 700; }
     .table tbody tr td.total, .table tbody tr td.price {
       color: #000000; }
-
+      .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      body {
+        background: #e1e3de;
+      }
+      
+      #mount-point {
+        padding: 60px;
+        max-width: 800px;
+        margin: auto;
+        
+        input {
+          line-height: 2;
+          font-size: 18px;
+          height: auto;
+          padding-left: 20px;
+        }
+        
+        ul {
+          margin: 0;
+        
+        li {
+          list-style: none;
+          border: 1px solid #ccc;
+          margin-top: -1px;
+          line-height: 2;
+          padding: 5px 20px;
+          background: white;
+        }
+          
+        }
+        
+      }
+      
+      .dropdown-content a:hover {background-color: #f1f1f1}
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      
+      .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+      }
 .cart-wrap .btn-primary {
   display: block;
   width: 100%; }

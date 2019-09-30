@@ -4,6 +4,9 @@ import Navbar from '../Common/Navbar'
 import CatalogHome from './CatalogHome'
 import Footer from '../Common/Footer'
 import CatalogProduct from './CatalogProduct'
+import Filter from '../Search/Filter'
+import FilteredList from '../Search/FilteredList'
+
 const ProductDetails=[
     {
         productImage:'./images/product-1.png',
@@ -47,6 +50,27 @@ const ProductDetails=[
     }
 ];
 export default class Shop extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={
+            productDeatils:[]
+        }
+        this.onFetchProductDetails();
+    }
+
+    onFetchProductDetails=()=>{
+        
+        fetch('http://localhost/MinishopApi/DataselectionApi.php')
+        .then(result=>{
+            return result.json();
+        }
+        ).then(data=>
+            {
+              console.log(data,'datssssssssssssssssss');
+              this.setState({productDeatils:data});
+            })
+          }
+       
     render()
     {
     return(
@@ -54,8 +78,9 @@ export default class Shop extends React.Component{
     <Header/>
     <Navbar/>
     <CatalogHome/>
+    <FilteredList FilteredData={this.state.productDeatils}/>
     <div>
-    <CatalogProduct data={ProductDetails}/>
+    <CatalogProduct data={this.state.productDeatils}/>
     </div>
     <Footer/>
     </div>

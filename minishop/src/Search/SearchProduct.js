@@ -4,13 +4,14 @@ export default class Product extends React.Component{
     constructor(props){
         super(props)
     }
+
     render()
+
     {
         return(  
         <div className="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex" >
         <div  className="product d-flex flex-column">
-         < Link to={{pathname:"/SingleProductView",
-                 productParam:{productDeatils:this.props.data}}} className="img-prod">
+         < Link to=""className="img-prod">
          <img className="img-fluid" style={{"height":"200px","width":"250px"}}
           src={this.props.data.image} alt="Colorlib Template"/>
          <div  className="overlay"></div>

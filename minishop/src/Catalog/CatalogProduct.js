@@ -1,7 +1,25 @@
 import React from 'react'
 import SideBar from './SideBar'
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+
 export default class CatalogProduct extends  React.Component{
+  constructor(props){
+    super(props);
+    this.state={
+      catagories:[]
+    }
+    this.onFetchSportsDetails()
+  }
+  onFetchSportsDetails=()=>
+  {
+    fetch('http://localhost/MinishopApi/catagoriesDataselectionApi.php?type=getByAllId')
+    .then(result=>{
+      return result.json();
+    }).then (datas=>{
+      this.setState({catagories:datas})
+      console.log(datas)
+    })
+  }
     render()
     {
         return(
@@ -16,8 +34,7 @@ export default class CatalogProduct extends  React.Component{
         
                 <Link to={{pathname:"/SingleProductView",
                  productParam:{productDeatils:product}}}  className="img-prod">
-                  <img className="img-fluid" src={product.productImage} 
-                alt="Colorlib Template"/>
+                <img className="img-fluid"style={{"height":"200px","width":"250px"}} src={product.image} alt="Colorlib Template"/>
                  <div className="overlay"></div>
                  </Link>
                 <div className="text py-3 pb-4 px-3">
@@ -35,9 +52,9 @@ export default class CatalogProduct extends  React.Component{
                   </p>
                   </div>
                  </div>
-                <h3><a href="#">{product.productTitle}</a></h3>
+                <h3><a href="#">{product.name}</a></h3>
                 <div className="pricing">
-                <p className="price"><span>{product.productPrize}</span></p>
+                <p className="price"><span>{product.prize}</span></p>
                     </div>
                       <p className="bottom-area d-flex px-3">
                      <a href="#" className="add-to-cart text-center py-2 mr-1"><span>Add to cart <i className="ion-ios-add ml-1"></i></span></a>
@@ -49,8 +66,8 @@ export default class CatalogProduct extends  React.Component{
                      ))}
       </div>
        </div>
-                 
-      <SideBar/>  
+                
+      <SideBar data={this.state.catagories} datas={this.state.catagories}/>  
       </div>
         </div>
     </section>
