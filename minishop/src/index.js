@@ -12,6 +12,7 @@ import Cart from './Catalog/Cart'
 import Checkout from './Catalog/Checkout'
 import SingleProductView from  './Catalog/SingleProductView'
 import SearchProduct from './Search/SearchProduct'
+
 const routing = (
     <Router>
       <div>
@@ -25,7 +26,6 @@ const routing = (
         <Route path="/Contact" component={Contact}/>
         <Route path="/SingleProductView" component={SingleProductView }/>
         <Route path="/SearchProduct" component={SearchProduct}/>
-
 
       </div>
     </Router>

@@ -4,7 +4,6 @@ import Navbar from '../Common/Navbar'
 import CatalogHome from './CatalogHome'
 import Footer from '../Common/Footer'
 import CatalogProduct from './CatalogProduct'
-import Filter from '../Search/Filter'
 import FilteredList from '../Search/FilteredList'
 
 const ProductDetails=[

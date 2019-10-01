@@ -9,7 +9,7 @@ export default class SideBar extends React.Component{
     renderSubCategory(cateId){
        var lsit=  this.props.data.map(function(item, i){
             console.log('test','tesrrrrrrrrrrrrrrrrrrr');
-            if(item.parentId==cateId)
+            if(item.parentId===cateId)
             return (<li><a href="#">{item.cateName}</a></li>)
           });
           return lsit;

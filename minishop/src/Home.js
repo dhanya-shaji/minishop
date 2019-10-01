@@ -10,9 +10,9 @@ import ProductDescription from './Components/ProductDescription'
 import Offer from './Components/Offer'
 import DealWithTheMonth from './Components/DealWithTheMonth'
 import Gallery from './Components/Gallery'
-import Sample from './Components/Sample'
+import FilteredList from './Search/FilteredList'
 
-const ProductDetails=[
+/*const ProductDetails=[
     {
         productImage:'./images/product-1.png',
         productTitle:'NIKE FREE RN 2019 ID',
@@ -53,7 +53,7 @@ const ProductDetails=[
         productTitle:'NIKE FREE RN 2019 ID',
         productPrize:"1900rs"
     }
-];
+];*/
 export default class Home extends React.Component{
     constructor(props){
         super(props);
@@ -83,7 +83,7 @@ export default class Home extends React.Component{
                <Header/>
                <Navbar/>
                <Homecomponents/>
-               <Sample item={this.state.productDeatils}/>
+               <FilteredList/>
                <section className="ftco-section ftco-no-pt ftco-no-pb row">
                    <Feature1/>
                    <Feature2/>

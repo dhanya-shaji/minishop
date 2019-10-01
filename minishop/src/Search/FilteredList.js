@@ -1,5 +1,6 @@
 import React from 'react'
 import SearchProduct from './SearchProduct';
+
 export default class Sample extends React.Component{
     constructor(props){
         super(props);
@@ -51,15 +52,22 @@ export default class Sample extends React.Component{
     {  
         const {text}=this.state;
         return(
-            <div>
-                <div>
-                <input value={text} onChange={this.onTextchanged} placeholder="Search here......."type="text"style={{"width" : "750px","height":"40px"}}/>
+            <div className="container">
+              <div className="input-group">
+                <input type="text" className="form-control" placeholder="Search here....." 
+                onChange={this.onTextchanged} type="text"/>
+                <div className="input-group-btn">
+                     <button class="btn btn-default"
+                     style={{"width":"55px","height":"53px",backgroundColor:"grey"}}>
+                         <i className="icon glyphicon glyphicon-search"/>
+                    </button>
                 </div>
-                <div>
+              </div>
+              <div>
                   {this.rendersuggetion()}
                 </div>
-                
-            </div>
+          </div>
+          
         )
     }
 }

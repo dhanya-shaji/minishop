@@ -10,7 +10,7 @@ export default class Features3 extends React.Component{
               </div>
               <div className="media-body">
                 <h3 className="heading">Secure Payments</h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <p style={{"fontSize":"20px"}}>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
               </div>
             </div>      
           </div>
