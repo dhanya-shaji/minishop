@@ -26,6 +26,7 @@ const routing = (
         <Route path="/Contact" component={Contact}/>
         <Route path="/SingleProductView" component={SingleProductView }/>
         <Route path="/SearchProduct" component={SearchProduct}/>
+        
 
       </div>
     </Router>

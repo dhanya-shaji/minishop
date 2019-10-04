@@ -1,14 +1,11 @@
 import React from "react";
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 export default class CartComponents extends React.Component {
 	constructor(props){
     super(props);
-    this.state = {
-      fromIdeas:[],
-    }
-    this.setState({fromIdeas:this.props.producParam})
 	}
   render() {
-    const { productDeatils} = this.state.location.fromIdeas;
+    const { productDeatils} = this.props.location.productParam  ;
     return (
       <section className="ftco-section ftco-cart">
         <div className="container">
